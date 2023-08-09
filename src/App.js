@@ -4,8 +4,8 @@ import Recommended from "./Recommended/Recommended";
 function App() {
   return <>
   <Navigation/>
-  <Products/>
   <Recommended/>
+  <Products/>
   
   
   

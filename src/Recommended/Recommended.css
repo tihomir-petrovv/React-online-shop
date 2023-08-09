@@ -1,0 +1,22 @@
+.recommended-flex{
+    display: flex;
+    margin-left: 20rem;
+}
+.recommended-title{
+    margin-left: 20rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: "Edu SA Beginner", cursive;
+}
+.buttons{
+    padding: 6px 12px;
+    margin-right: 6px;
+    background-color: transparent;
+    border: 2px solid blue;
+    border-radius: 10px;
+    color: #323232;
+    cursor: pointer;
+    font-family: "Edu SA Beginner", cursive;
+    font-size: 15px;
+}
