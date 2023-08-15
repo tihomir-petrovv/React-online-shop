@@ -7,7 +7,7 @@ import Recommended from "./Recommended/Recommended";
 import Sidebar from "./Sidebar/Sidebar";
 
 import products from "./db/data";
-import Card from "./components/Card"
+import Card from "./components/Card";
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -17,8 +17,9 @@ function App() {
     setQuery(event.target.value);
   };
 
-  const filteredItems = products.filter((product) =>
-    product.title.toLowerCase().indexOf(query.toLowerCase())!== -1);
+  const filteredItems = products.filter(
+    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  );
 
   const handleChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -46,23 +47,19 @@ function App() {
       );
     }
 
-    return filteredProducts.map(({img, title, price})=>{
-      <Card 
-      key={Math.random()}/>
-      img={img}
-      title={title}
-      price = {price}    
-    })
+    return filteredProducts.map(({ img, title, price }) => (
+      <Card key={Math.random()} img={img} title={title} price={price} />
+    ));
   }
 
-  const result = filteredData(products, selectedCategory, query)
+  const result = filteredData(products, selectedCategory, query);
 
   return (
     <>
       <Sidebar handleChange={handleChange} />
-      <Navigation />
-      <Recommended />
-      <Products />
+      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Recommended handleClick={handleClick} />
+      <Products result={result} />
     </>
   );
 }

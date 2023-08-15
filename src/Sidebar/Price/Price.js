@@ -2,6 +2,7 @@ import Input from "../../components/Input";
 import "./Price.css";
 function Price({handleChange}) {
   return (
+    <>
     <div className="ml">
       <h2 className="sidebar-title price-title">Price</h2>
       <label className="sidebar-label-container">
@@ -25,10 +26,11 @@ function Price({handleChange}) {
       />
       <Input handleChange={handleChange} 
       value={200}
-      title="Over $150"
+      title="Over $200"
       name="test2"      
       />
     </div>
+    </>
   );
 }
 
