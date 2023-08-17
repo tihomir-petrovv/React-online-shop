@@ -35,7 +35,6 @@ function App() {
     if (query) {
       filteredProducts = filteredItems;
     }
-
     if (selected) {
       filteredProducts = filteredProducts.filter(
         ({ category, color, company, price, title }) =>
